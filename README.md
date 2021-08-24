@@ -1,9 +1,9 @@
 # Rust设计模式
 
-[在线阅读地址]: https://rust-unofficial.github.io/patterns/
-[DeepL]: https://deepl.com
+[在线阅读地址]: https://poly000.github.io/patterns-zh/
+[DeepL]: https://deepl.com/
 
-一本开源的关于Rust设计模式与习语的书，您可以在[这里][在线阅读地址]阅读。
+这是一本开源的关于Rust设计模式与习语的书，您可以在[这里][在线阅读地址]阅读。
 
 本书使用了[DeepL]进行翻译，然后人工润色。感谢DeepL的优质翻译服务！
 
