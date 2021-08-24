@@ -4,7 +4,7 @@
 
 如果你想要参与这本书，请看[贡献指引](CONTRIBUTING_zh.md).
 
-## Design patterns
+## 设计模式
 
 When developing programs, we have to solve many problems.
 A program can be viewed as a solution to a problem.
