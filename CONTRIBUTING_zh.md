@@ -2,9 +2,9 @@
 
 ## 简介
 
-[习惯用语]: https://en.wikipedia.org/wiki/Programming_idiom
+[典型用法]: https://en.wikipedia.org/wiki/Programming_idiom
 
-这本书是Rust编程技术，(反)模式，[习惯用语]以及其他表示的目录。
+这本书是Rust编程技术，(反)模式，[典型用法]以及其他表示的目录。
 
 这本书介绍的模式**并不是规则**，但可以被视为编写地道的Rust代码的指引。
 我们会整理这本书中 Rust 模式，以便学习者掌握Rust习语的权衡，并且在他们的代码中正确地使用。
@@ -15,22 +15,19 @@
 
 [讨论区]: https://github.com/rust-unofficial/patterns/discussions
 
-如果你有关于某些内容的问题或想法，而你想要得到社区的反馈，
+如果你有关于一些内容的问题或想法，而你想要得到社区的反馈，
 并且认为不适合提出issue，你可以在我们的[讨论区]提出讨论。
 
 ## 撰写新文章
 
-Before writing a new article please check in one of the following resources if
-there is an existing discussion or if someone is already working on that topic:
+在编写新文章前，请检查下列资源中有没有已存在的讨论，或者已经有人在编写：
 
 - [Umbrella issue](https://github.com/rust-unofficial/patterns/issues/116),
 - [All issues](https://github.com/rust-unofficial/patterns/issues),
 - [Pull Requests](https://github.com/rust-unofficial/patterns/pulls)
 
-If you don't find an issue regarding your topic, and you are sure it is not more
-feasible to open a thread in the [discussion board](https://github.com/rust-unofficial/patterns/discussions)
-please open a new issue, so we can discuss the ideas and future content
-of the article together and maybe give some feedback/input on it.
+如果你找不到相关的issue，而且你确定应该提issue而非[讨论区]的帖子，请提出新的issue。
+这样我们就可以讨论想法，以及文档未来的内容。也许还会得到反馈/投入。
 
 When writing a new article it's recommended to copy the [pattern template](https://github.com/rust-unofficial/patterns/blob/master/template.md)
 into the appropriate directory and start editing it. You may not want to fill
