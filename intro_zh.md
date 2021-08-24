@@ -2,7 +2,9 @@
 
 ## 加入我们
 
-如果你想要参与这本书，请看[贡献指引](CONTRIBUTING_zh.md).
+[贡献指引]: https://github.com/poly000/patterns-zh/blob/master/CONTRIBUTING_zh.md
+
+如果你想要参与这本书，请看[贡献指引]。
 
 ## 设计模式
 

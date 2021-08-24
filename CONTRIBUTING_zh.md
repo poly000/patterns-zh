@@ -2,9 +2,9 @@
 
 ## 简介
 
-[习语]: https://en.wikipedia.org/wiki/Programming_idiom
+[习惯用语]: https://en.wikipedia.org/wiki/Programming_idiom
 
-这本书是Rust编程技术，(反)模式，[习语] 以及其他表示的目录。
+这本书是Rust编程技术，(反)模式，[习惯用语]以及其他表示的目录。
 
 这本书介绍的模式**并不是规则**，但可以被视为编写地道的Rust代码的指引。
 我们会整理这本书中 Rust 模式，以便学习者掌握Rust习语的权衡，并且在他们的代码中正确地使用。
