@@ -20,51 +20,50 @@
 
 ## 撰写新文章
 
+[模式模板]: https://github.com/rust-unofficial/patterns/blob/master/template.md
+[Rustlings]: https://github.com/rust-lang/rustlings
+[playground]: https://play.rust-lang.org/
+[Wayback Machine]: https://web.archive.org/
+
 在编写新文章前，请检查下列资源中有没有已存在的讨论，或者已经有人在编写：
 
 - [Umbrella issue](https://github.com/rust-unofficial/patterns/issues/116),
 - [All issues](https://github.com/rust-unofficial/patterns/issues),
 - [Pull Requests](https://github.com/rust-unofficial/patterns/pulls)
 
-如果你找不到相关的issue，而且你确定应该提issue而非[讨论区]的帖子，请提出新的issue。
-这样我们就可以讨论想法，以及文档未来的内容。也许还会得到反馈/投入。
+如果你找不到相关的issue，而且你确定应该提issue而非[讨论区]的帖子，
+请提出新的issue。这样我们就可以讨论想法，以及文档未来的内容。
+也许您还会得到反馈与投入。
 
-When writing a new article it's recommended to copy the [pattern template](https://github.com/rust-unofficial/patterns/blob/master/template.md)
-into the appropriate directory and start editing it. You may not want to fill
-out every section and remove it, or you might want to add extra sections.
+编写新文章时，推荐您复制[模式模板]到适当的目录，再开始编辑。
+您可能不希望填写每个小节，而进行删除。您也可以加入附加部分。
 
-Consider writing your article in a way that has a low barrier of entry so also
-[Rustlings](https://github.com/rust-lang/rustlings) can follow and understand
-the thought process behind it. So we can encourage people to use these patterns
-early on.
+请考虑编写低门槛的文章，让[Rustlings]也可以理解并跟随背后的思想过程。
+这样我们就能鼓励人们在学习前期开始使用这些。
 
-We encourage you to write idiomatic Rust code that builds in the [playground](https://play.rust-lang.org/).
+我们鼓励您编写地道的Rust代码，在[playground]上构建。
 
-If you use links to blogposts or in general content that is not to be sure
-existing in a few years (e.g. pdfs) please take a snapshot with the
-[Wayback Machine](https://web.archive.org/) and use the link to that snapshot
-in your article.
+如果您使用了博文，或者通常不认为能够存在几年的内容，请使用[Wayback Machine]创建快照，并且在您的文章中使用快照。
 
-Don't forget to add your new article to the `SUMMARY.md` to let it be rendered
-to the book.
+不要忘记将您的文章加入`SUMMARY.md`，将它渲染到书中。
 
-Please make `Draft Pull requests` early, so we can follow your progress and can
-give early feedback (see the following section).
+请尽早提出 `Draft Pull Request`，这样我们就能跟随您的进程，并且尽早进行反馈（见下节）。
 
-## Style guide
+## 风格指南
 
-In order to have a consistent style across the book, we suggest to:
+为了统一这本书的风格，我们建议：
 
-- Follow the official Rust book's [style guide](https://github.com/rust-lang/book/blob/master/style-guide.md).
-- Follow [RFC 1574](https://github.com/rust-lang/rfcs/blob/master/text/1574-more-api-documentation-conventions.md#appendix-a-full-conventions-text).
+- 跟随官方的Rust教程的 [风格指南](https://github.com/rust-lang/book/blob/master/style-guide.md).
+- 跟随 [RFC 1574](https://github.com/rust-lang/rfcs/blob/master/text/1574-more-api-documentation-conventions.md#appendix-a-full-conventions-text).
   Tl;dr:
-  - Prefer full types name. For example `Option<T>` instead of `Option`.
-  - Prefer line comments (`//`) over block comments (`/* */`) where applicable.
+  - 偏好完整的类型名，例如使用`Option<T>`而非`Option`.
+  - 在适用的情况下使用行注释`//`而不是块注释`/* */`。
 
-## Check the article locally
+## 在本地检查文章
 
-Before submitting the PR launch the commands `mdbook build` to make sure that
-the book builds and `mdbook test` to make sure that code examples are correct.
+在提交PR前运行命令`mdbook build`，确保这本书能正常构建。
+
+以及运行`mdbook test`确保代码示例是正确的。
 
 ### Markdown lint
 
