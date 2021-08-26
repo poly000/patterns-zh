@@ -1,4 +1,4 @@
-# Design Patterns
+# 设计模式
 
 [设计模式]: https://zh.wikipedia.org/wiki/设计模式_(计算机)
 
