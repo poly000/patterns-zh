@@ -21,7 +21,7 @@
   - [Temporary mutability](./idioms/temporary-mutability.md)
 
 - [设计模式](./patterns/index_zh.md)
-  - [Behavioural](./patterns/behavioural/intro.md)
+  - [行为型模式](./patterns/behavioural/intro_zh.md)
     - [Command](./patterns/behavioural/command.md)
     - [Interpreter](./patterns/behavioural/interpreter.md)
     - [Newtype](./patterns/behavioural/newtype.md)
