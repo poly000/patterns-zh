@@ -12,7 +12,6 @@
 ## Rust中的设计模式
 
 Rust有许多独特的特性。这些特性为我们消除了一整类问题，给了我们巨大的好处。其中一些是Rust独有的模式。
-Rust has many unique features. These features give us great benefit by removing whole classes of problems. Some of them are also patterns that are _unique_ to Rust.
 
 ## YAGNI
 
