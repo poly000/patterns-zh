@@ -20,7 +20,7 @@
   - [Easy doc initialization](./idioms/rustdoc-init.md)
   - [Temporary mutability](./idioms/temporary-mutability.md)
 
-- [Design Patterns](./patterns/index.md)
+- [设计模式](./patterns/index_zh.md)
   - [Behavioural](./patterns/behavioural/intro.md)
     - [Command](./patterns/behavioural/command.md)
     - [Interpreter](./patterns/behavioural/interpreter.md)

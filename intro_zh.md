@@ -16,13 +16,8 @@
 有许多问题具有共同的形式。由于事实上Rust并不完全是面向对象的，设计模式也与其他面向对象的编程语言不同。
 细节不同的同时，因为他们有相同的形式，他们可以用同样的基本方法解决。
 
-- [设计模式](./patterns/index.md)是编写软件时解决常见问题的方式。
-- [反模式](./anti_patterns/index.md) are methods to solve these same
-  common problems. However, while design patterns give us benefits,
-  anti-patterns create more problems.
-- [Idioms](./idioms/index.md) are guidelines to follow when coding.
-  They are social norms of the community.
-  You can break them, but if you do you should have a good reason for it.
+- [设计模式](./patterns/index_zh.md)是编写软件时解决常见问题的方式。
+- [反模式](./anti_patterns/index.md)也是解决这些常见问题的方法。然而，设计模式给我们带来益处，反模式却带来了更多问题。
+- [典型用例](./idioms/index.md)是对编程的指引。他们是社区标准，你可以打破，但应该有充分的理由。
 
-TODO: Mention why Rust is a bit special - functional elements, type system,
-borrow checker
+TODO: 介绍为什么Rust比较独特 - 函数式元素，类型系统，借用检查。

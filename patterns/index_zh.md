@@ -1,0 +1,25 @@
+# Design Patterns
+[设计模式]: https://zh.wikipedia.org/wiki/设计模式_(计算机)
+[设计模式]是在软件设计中，针对某一特定背景下经常发生的问题的一般可重复使用的解决方案。
+设计模式是描述一种编程语言文化不错的方式。设计模式具有很强的语言特性。
+在一种语言中属于模式的东西，在另一种语言中可能由于语言特性而没有必要，或者由于某种特性缺失而无法表达。
+
+如果过度使用，设计模式会给程序增添不必要的复杂度。
+然而，它们也是分享一种编程语言的中级或高级知识的好方法。
+
+## Rust中的设计模式
+
+Rust有许多独特的特性。这些特性为我们消除了一整类问题，给了我们巨大的好处。其中一些是Rust独有的模式。
+Rust has many unique features. These features give us great benefit by removing whole classes of problems. Some of them are also patterns that are _unique_ to Rust.
+
+## YAGNI
+
+YAGNI是`You Aren't Going to Need It`的首字母缩写，即“你不需要它”。
+这是一个重要的软件设计原则，应当应用于你编写的代码。
+
+> 我写过的最好的代码就是我从未写出的代码。
+
+如果我们使用YAGNI去设计模式，我们会发现，Rust的特性允许我们抛弃大量的模式。
+例如，Rust中，我们不需要[策略模式](https://zh.wikipedia.org/wiki/策略模式) ，因为我们只需使用[特质](https://doc.rust-lang.org/book/traits.html).
+
+TODO: 可能会引入一些代码，简述trait。

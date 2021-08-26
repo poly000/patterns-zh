@@ -9,6 +9,8 @@
 
 感谢《Rust Design Pattern》这本优秀的书！
 
+感谢 [rust-lang-cn](https://github.com/rust-lang-cn) 的 [中英文术语对照表](https://rustwiki.org/wiki/translate/english-chinese-glossary-of-rust/) 。
+
 ## 贡献
 
 You are missing content in this repository that can be helpful for others, and
@@ -39,6 +41,6 @@ directory of the repository:
   Serves the book at `http://localhost:3000` (port is changeable, take a look at
   the terminal output to be sure) and reloads the browser when a change occurs.
 
-## License
+## 许可证
 
-The content of this repository is licensed under **MPL-2.0**; see [LICENSE](./LICENSE).
+此仓库内容以**MPL-2.0**许可证发布，见[LICENSE](./LICENSE).
