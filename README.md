@@ -10,7 +10,7 @@
 感谢《Rust Design Pattern》这本优秀的书！
 
 感谢 [rust-lang-cn](https://github.com/rust-lang-cn) 的
-[中英文术语对照表](https://rustwiki.org/wiki/translate/english-chinese-glossary-of-rust/) 。
+[中英文术语对照表](https://rustwiki.org/wiki/translate/english-chinese-glossary-of-rust)
 
 ## 贡献
 
