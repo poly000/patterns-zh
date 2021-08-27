@@ -1,14 +1,13 @@
-# Strategy (aka Policy)
+# 策略
 
-## Description
+## 简介
 
-The [Strategy design pattern](https://en.wikipedia.org/wiki/Strategy_pattern)
-is a technique that enables separation of concerns.
-It also allows to decouple software modules through [Dependency Inversion](https://en.wikipedia.org/wiki/Dependency_inversion_principle).
+[Dependency Inversion]: https://en.wikipedia.org/wiki/Dependency_inversion_principle
 
-The basic idea behind the Strategy pattern is that, given an algorithm solving
-a particular problem, we define only the skeleton of the algorithm at an abstract
-level, and we separate the specific algorithm’s implementation into different parts.
+[策略模式](https://zh.wikipedia.org/zh-sg/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F)
+是一种能够分离关注点的技术。它也允许通过 [Dependency Inversion] 解耦软件模块。
+
+策略模式的基本思想是，给定一个解决特定问题的算法，我们只在抽象层面定义算法的骨架，并将具体算法的实现分成不同的部分。
 
 In this way, a client using the algorithm may choose a specific implementation,
 while the general algorithm workflow remains the same. In other words, the abstract

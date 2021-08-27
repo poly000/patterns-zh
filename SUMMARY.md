@@ -26,7 +26,7 @@
     - [Interpreter](./patterns/behavioural/interpreter.md)
     - [Newtype](./patterns/behavioural/newtype.md)
     - [RAII Guards](./patterns/behavioural/RAII.md)
-    - [Strategy](./patterns/behavioural/strategy.md)
+    - [策略模式](./patterns/behavioural/strategy_zh.md)
     - [Visitor](./patterns/behavioural/visitor.md)
   - [Creational](./patterns/creational/intro.md)
     - [Builder](./patterns/creational/builder.md)
