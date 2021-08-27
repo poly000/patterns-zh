@@ -3,10 +3,6 @@
 MD003:
   style: atx
 
-# Set maximum line length
-MD013:
-  line_length: 80
-
 # Use `---` for horizontal rule
 MD035:
   style: ---

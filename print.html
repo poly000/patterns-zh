@@ -1859,14 +1859,11 @@ works just as well.</p>
 <a href="https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">wikipedia</a>.</p>
 <p><a href="https://doc.rust-lang.org/1.0.0/style/ownership/raii.html">Style guide entry</a>
 (currently just a placeholder).</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="strategy-aka-policy"><a class="header" href="#strategy-aka-policy">Strategy (aka Policy)</a></h1>
-<h2 id="description-20"><a class="header" href="#description-20">Description</a></h2>
-<p>The <a href="https://en.wikipedia.org/wiki/Strategy_pattern">Strategy design pattern</a>
-is a technique that enables separation of concerns.
-It also allows to decouple software modules through <a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion</a>.</p>
-<p>The basic idea behind the Strategy pattern is that, given an algorithm solving
-a particular problem, we define only the skeleton of the algorithm at an abstract
-level, and we separate the specific algorithm’s implementation into different parts.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="策略"><a class="header" href="#策略">策略</a></h1>
+<h2 id="简介-1"><a class="header" href="#简介-1">简介</a></h2>
+<p><a href="https://zh.wikipedia.org/zh-sg/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F">策略模式</a>
+是一种能够分离关注点的技术。它也允许通过 <a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion</a> 解耦软件模块。</p>
+<p>策略模式的基本思想是，给定一个解决特定问题的算法，我们只在抽象层面定义算法的骨架，并将具体算法的实现分成不同的部分。</p>
 <p>In this way, a client using the algorithm may choose a specific implementation,
 while the general algorithm workflow remains the same. In other words, the abstract
 specification of the class does not depend on the specific implementation of the
@@ -2014,7 +2011,7 @@ fn main() {
 <li><a href="https://en.wikipedia.org/wiki/Modern_C++_Design#Policy-based_design">Policy Based Design</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="visitor"><a class="header" href="#visitor">Visitor</a></h1>
-<h2 id="description-21"><a class="header" href="#description-21">Description</a></h2>
+<h2 id="description-20"><a class="header" href="#description-20">Description</a></h2>
 <p>A visitor encapsulates an algorithm that operates over a heterogeneous
 collection of objects. It allows multiple different algorithms to be written
 over the same data without having to modify the data (or their primary
@@ -2117,7 +2114,7 @@ result in design problems or in added complexity to the design. Creational desig
 patterns solve this problem by somehow controlling this object creation.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="builder"><a class="header" href="#builder">Builder</a></h1>
-<h2 id="description-22"><a class="header" href="#description-22">Description</a></h2>
+<h2 id="description-21"><a class="header" href="#description-21">Description</a></h2>
 <p>Construct an object with calls to a builder helper.</p>
 <h2 id="example-17"><a class="header" href="#example-17">Example</a></h2>
 <pre><pre class="playground"><code class="language-rust edition2018">
@@ -2217,7 +2214,7 @@ implementing this pattern while avoiding the boilerplate.</li>
 <li><a href="https://web.archive.org/web/20210104103000/https://rust-lang.github.io/api-guidelines/type-safety.html#c-builder">Construction of complex values</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="fold"><a class="header" href="#fold">Fold</a></h1>
-<h2 id="description-23"><a class="header" href="#description-23">Description</a></h2>
+<h2 id="description-22"><a class="header" href="#description-22">Description</a></h2>
 <p>Run an algorithm over each item in a collection of data to create a new item,
 thus creating a whole new collection.</p>
 <p>The etymology here is unclear to me. The terms 'fold' and 'folder' are used
@@ -2325,7 +2322,7 @@ among entities.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="compose-structs-together-for-better-borrowing"><a class="header" href="#compose-structs-together-for-better-borrowing">Compose structs together for better borrowing</a></h1>
 <p>TODO - this is not a very snappy name</p>
-<h2 id="description-24"><a class="header" href="#description-24">Description</a></h2>
+<h2 id="description-23"><a class="header" href="#description-23">Description</a></h2>
 <p>Sometimes a large struct will cause issues with the borrow checker - although
 fields can be borrowed independently, sometimes the whole struct ends up being
 used at once, preventing other uses. A solution might be to decompose the struct
@@ -2409,7 +2406,7 @@ independently of each other. In the example, the borrow checker knows that <code
 and <code>a.c</code> are distinct and can be borrowed independently, it does not try to
 borrow all of <code>a</code>, which would make this pattern useless.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="prefer-small-crates"><a class="header" href="#prefer-small-crates">Prefer small crates</a></h1>
-<h2 id="description-25"><a class="header" href="#description-25">Description</a></h2>
+<h2 id="description-24"><a class="header" href="#description-24">Description</a></h2>
 <p>Prefer small crates that do one thing well.</p>
 <p>Cargo and crates.io make it easy to add third-party libraries, much more so than
 in say C or C++. Moreover, since packages on crates.io cannot be edited or removed
@@ -2449,7 +2446,7 @@ query the number of CPUs on a machine.</p>
 <li><a href="https://crates.io/">crates.io: The Rust community crate host</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="contain-unsafety-in-small-modules"><a class="header" href="#contain-unsafety-in-small-modules">Contain unsafety in small modules</a></h1>
-<h2 id="description-26"><a class="header" href="#description-26">Description</a></h2>
+<h2 id="description-25"><a class="header" href="#description-25">Description</a></h2>
 <p>If you have <code>unsafe</code> code, create the smallest possible module that can uphold
 the needed invariants to build a minimal safe interface upon the unsafety. Embed
 this into a larger module that contains only safe code and presents an ergonomic
@@ -2495,7 +2492,7 @@ together into an opaque &quot;object&quot;</p>
 </li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="object-based-apis"><a class="header" href="#object-based-apis">Object-Based APIs</a></h1>
-<h2 id="description-27"><a class="header" href="#description-27">Description</a></h2>
+<h2 id="description-26"><a class="header" href="#description-26">Description</a></h2>
 <p>When designing APIs in Rust which are exposed to other languages, there are some
 important design principles which are contrary to normal Rust API design:</p>
 <ol>
@@ -2715,7 +2712,7 @@ strings with minimal unsafe code, and is easier to get right than
 <p>However, not every API can be done this way.
 It is up to the best judgement of the programmer as to who their audience is.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="type-consolidation-into-wrappers"><a class="header" href="#type-consolidation-into-wrappers">Type Consolidation into Wrappers</a></h1>
-<h2 id="description-28"><a class="header" href="#description-28">Description</a></h2>
+<h2 id="description-27"><a class="header" href="#description-27">Description</a></h2>
 <p>This pattern is designed to allow gracefully handling multiple related types,
 while minimizing the surface area for memory unsafety.</p>
 <p>One of the cornerstones of Rust's aliasing rules is lifetimes.
@@ -2852,7 +2849,7 @@ knowing how <em>not</em> to solve it. Anti-patterns give us great counter-exampl
 consider relative to design patterns. Anti-patterns are not confined to code.
 For example, a process can be an anti-pattern, too.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="clone-to-satisfy-the-borrow-checker"><a class="header" href="#clone-to-satisfy-the-borrow-checker">Clone to satisfy the borrow checker</a></h1>
-<h2 id="description-29"><a class="header" href="#description-29">Description</a></h2>
+<h2 id="description-28"><a class="header" href="#description-28">Description</a></h2>
 <p>The borrow checker prevents Rust users from developing otherwise unsafe code by
 ensuring that either: only one mutable reference exists, or potentially many but
 all immutable references exist. If the code written does not hold true to these
@@ -2917,7 +2914,7 @@ cases in which <code>.clone()</code> is not necessary, like <a href="https://rus
 <li><a href="https://web.archive.org/web/20210120233744/https://xion.io/post/code/rust-borrowchk-tricks.html">Tricks with ownership in Rust</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="denywarnings"><a class="header" href="#denywarnings"><code>#![deny(warnings)]</code></a></h1>
-<h2 id="description-30"><a class="header" href="#description-30">Description</a></h2>
+<h2 id="description-29"><a class="header" href="#description-29">Description</a></h2>
 <p>A well-intentioned crate author wants to ensure their code builds without
 warnings. So they annotate their crate root with the following:</p>
 <h2 id="example-21"><a class="header" href="#example-21">Example</a></h2>
@@ -2999,7 +2996,7 @@ certain that there will be more deprecated APIs in the future.</p>
 <li><a href="https://github.com/Manishearth/rust-clippy">rust-clippy</a> is a collection of lints for better Rust code</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deref-polymorphism"><a class="header" href="#deref-polymorphism"><code>Deref</code> polymorphism</a></h1>
-<h2 id="description-31"><a class="header" href="#description-31">Description</a></h2>
+<h2 id="description-30"><a class="header" href="#description-30">Description</a></h2>
 <p>Abuse the <code>Deref</code> trait to emulate inheritance between structs, and thus reuse
 methods.</p>
 <h2 id="example-22"><a class="header" href="#example-22">Example</a></h2>
@@ -3177,7 +3174,7 @@ result. This process continues until we get to the last element in the range,
 <tr><td align="center">45</td><td align="center">10</td><td align="center">55</td></tr>
 </tbody></table>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="generics-as-type-classes"><a class="header" href="#generics-as-type-classes">Generics as Type Classes</a></h1>
-<h2 id="description-32"><a class="header" href="#description-32">Description</a></h2>
+<h2 id="description-31"><a class="header" href="#description-31">Description</a></h2>
 <p>Rust's type system is designed more like functional languages (like Haskell)
 rather than imperative languages (like Java and C++). As a result, Rust can turn
 many kinds of programming problems into &quot;static typing&quot; problems. This is one
