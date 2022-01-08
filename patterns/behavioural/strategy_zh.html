@@ -146,27 +146,22 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="策略"><a class="header" href="#策略">策略</a></h1>
+                        <h1 id="strategy"><a class="header" href="#strategy">strategy</a></h1>
 <h2 id="简介"><a class="header" href="#简介">简介</a></h2>
 <p><a href="https://zh.wikipedia.org/zh-sg/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F">策略模式</a>
-是一种能够分离关注点的技术。它也允许通过 <a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion</a> 解耦软件模块。</p>
+是一种能够分离关注点的技术。它也允许通过 <a href="https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC%E5%8E%9F%E5%88%99">依赖反转原则</a> 解耦软件模块。</p>
 <p>策略模式的基本思想是，给定一个解决特定问题的算法，我们只在抽象层面定义算法的骨架，并将具体算法的实现分成不同的部分。</p>
-<p>In this way, a client using the algorithm may choose a specific implementation,
-while the general algorithm workflow remains the same. In other words, the abstract
-specification of the class does not depend on the specific implementation of the
-derived class, but specific implementation must adhere to the abstract specification.
-This is why we call it &quot;Dependency Inversion&quot;.</p>
-<h2 id="motivation"><a class="header" href="#motivation">Motivation</a></h2>
-<p>Imagine we are working on a project that generates reports every month.
-We need the reports to be generated in different formats (strategies), e.g.,
-in <code>JSON</code> or <code>Plain Text</code> formats.
-But things vary over time, and we don't know what kind of requirement we may get
-in the future. For example, we may need to generate our report in a completly new
-format, or just modify one of the existing formats.</p>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
-<p>In this example our invariants (or abstractions) are <code>Context</code>, <code>Formatter</code>,
-and <code>Report</code>, while <code>Text</code> and <code>Json</code> are our strategy structs. These strategies
-have to implement the <code>Formatter</code> trait.</p>
+<p>这样一来，使用此算法的用户可以选择具体实现，而算法流程保持不变。
+换句话说，类的抽象规范并不依赖于派生类的具体实现。但实现必须遵守抽象规范。
+这也正是为何我们叫它“依赖反转”。</p>
+<h2 id="为什么这样做"><a class="header" href="#为什么这样做">为什么这样做</a></h2>
+<p>想象一下，我们正在做一个每个月都生成报告的项目。
+我们需要以不同格式（策略）生成报告，比如说，使用<code>JSON</code>或者<code>纯文本</code>。
+但是事情并非一成不变，我们不知道将来我们会受到什么要求。
+例如，我们可能需要用全新的格式生成报告，又或者修改现有格式。</p>
+<h2 id="例子"><a class="header" href="#例子">例子</a></h2>
+<p>在这个例子中我们的不变量（或者说抽象）有 <code>Context</code>,<code>Formatter</code>以及<code>Report</code>,
+而<code>Text</code>和<code>Json</code>是我们的 strategy结构体。这些策略需要实现 <code>Formatter</code> trait。</p>
 <pre><pre class="playground"><code class="language-rust edition2018">use std::collections::HashMap;
 
 type Data = HashMap&lt;String, u32&gt;;
@@ -219,40 +214,32 @@ fn main() {
     assert!(s.contains(&quot;one 1&quot;));
     assert!(s.contains(&quot;two 2&quot;));
 
-    s.clear(); // reuse the same buffer
+    s.clear(); // 重用缓冲区
     Report::generate(Json, &amp;mut s);
     assert!(s.contains(r#&quot;{&quot;one&quot;:&quot;1&quot;}&quot;#));
     assert!(s.contains(r#&quot;{&quot;two&quot;:&quot;2&quot;}&quot;#));
 }
 </code></pre></pre>
-<h2 id="advantages"><a class="header" href="#advantages">Advantages</a></h2>
-<p>The main advantage is separation of concerns. For example, in this case <code>Report</code>
-does not know anything about specific implementations of <code>Json</code> and <code>Text</code>,
-whereas the output implementations does not care about how data is preprocessed,
-stored, and fetched. The only thing they have to know is context and a specific
-trait and method to implement, i.e,<code>Formatter</code> and <code>run</code>.</p>
-<h2 id="disadvantages"><a class="header" href="#disadvantages">Disadvantages</a></h2>
-<p>For each strategy there must be implemented at least one module, so number of modules
-increases with number of strategies. If there are many strategies to choose from
-then users have to know how strategies differ from one another.</p>
-<h2 id="discussion"><a class="header" href="#discussion">Discussion</a></h2>
-<p>In the previous example all strategies are implemented in a single file.
-Ways of providing different strategies includes:</p>
+<h2 id="优点"><a class="header" href="#优点">优点</a></h2>
+<p>主要的优势是事务的分离。例如，在这个例子中 <code>Report</code> 不需要了解 <code>Json</code> 与 <code>Text</code>的特定实现，
+同时输出实现也不关心数据如何被预处理，储存，或者提取。他们只需要得到上下文，和一个特定的trait与方法去实现——也就是，<code>Formatter</code> 和 <code>run</code>。</p>
+<h2 id="缺陷"><a class="header" href="#缺陷">缺陷</a></h2>
+<p>任何 strategy 必须至少实现一个方法，所以方法的数量随着 strategy 的数量而增加。
+如果有许多策略可供选择，用户必须知道它们之间的不同。</p>
+<h2 id="讨论"><a class="header" href="#讨论">讨论</a></h2>
+<p>在上个例子中，所有策略在一个文件实现。
+提供不同策略的方法有：</p>
 <ul>
-<li>All in one file (as shown in this example, similar to being separated as modules)</li>
-<li>Separated as modules, E.g. <code>formatter::json</code> module, <code>formatter::text</code> module</li>
-<li>Use compiler feature flags, E.g. <code>json</code> feature, <code>text</code> feature</li>
-<li>Separated as crates, E.g. <code>json</code> crate, <code>text</code> crate</li>
+<li>单一文件（如本例所示，类似分为模块。）</li>
+<li>分为模块，例如：<code>formatter::json</code>，<code>formatter::text</code></li>
+<li>使用编译器特性标记，如 <code>json</code>特性，<code>text</code>特性</li>
+<li>分为crate，例如，<code>json</code>crate, <code>text</code> crate</li>
 </ul>
-<p>Serde crate is a good example of the <code>Strategy</code> pattern in action. Serde allows
-<a href="https://serde.rs/custom-serialization.html">full customization</a> of the serialization
-behavior by manually implementing <code>Serialize</code> and <code>Deserialize</code> traits for our
-type. For example, we could easily swap <code>serde_json</code> with <code>serde_cbor</code> since they
-expose similar methods. Having this makes the helper crate <code>serde_transcode</code> much
-more useful and ergonomic.</p>
-<p>However, we don't need to use traits in order to design this pattern in Rust.</p>
-<p>The following toy example demonstrates the idea of the Strategy pattern using Rust
-<code>closures</code>:</p>
+<p>Serde 是实践中策略模式不错的例子。Serde允许 <a href="https://serde.rs/custom-serialization.html">完全自定义</a> 的序列化行为，
+只要为我们的类型手动实现<code>Serialize</code>与<code>Deserialize</code>trait。例如，我们可以简单地将<code>serde_json</code>换成<code>serde_cbor</code>，因为它们提供类似的方法。
+这让助手crate<code>serde_transcode</code>远更有用，更人性化。</p>
+<p>然而，在Rust中，我们不需要使用trait实现这个模式。</p>
+<p>下面的玩具例子演示了使用Rust <code>closures</code>的策略模式的想法。</p>
 <pre><pre class="playground"><code class="language-rust edition2018">struct Adder;
 impl Adder {
     pub fn add&lt;F&gt;(x: u8, y: u8, f: F) -&gt; u8
@@ -280,7 +267,7 @@ fn main() {
 }
 
 </code></pre></pre>
-<p>In fact, Rust already uses this idea for <code>Options</code>'s <code>map</code> method:</p>
+<p>事实上，Rust已经将这个点子应用在<code>Options</code>的<code>map</code>方法。</p>
 <pre><pre class="playground"><code class="language-rust edition2018">fn main() {
     let val = Some(&quot;Rust&quot;);
 
@@ -291,11 +278,11 @@ fn main() {
     assert_eq!(82, val.map(first_byte_strategy).unwrap());
 }
 </code></pre></pre>
-<h2 id="see-also"><a class="header" href="#see-also">See also</a></h2>
+<h2 id="另见"><a class="header" href="#另见">另见</a></h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Strategy_pattern">Strategy Pattern</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Modern_C++_Design#Policy-based_design">Policy Based Design</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Strategy_pattern">策略模式</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC%E5%8E%9F%E5%88%99">依赖反转原则</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Modern_C++_Design#Policy-based_design">基于策略设计</a></li>
 </ul>
 
                     </main>
