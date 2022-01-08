@@ -92,8 +92,6 @@ fn deref<'a>(&'a self) -> &'a T {
 
 [在析构器中终结](../../idioms/dtor-finally.md)
 
-RAII在C++更为常用：
-
-[zh.cppreference.com](http://zh.cppreference.com/w/cpp/language/raii), [维基百科](https://zh.wikipedia.org/wiki/RAII).
+RAII在C++更为常用：[zh.cppreference.com](http://zh.cppreference.com/w/cpp/language/raii), [维基百科](https://zh.wikipedia.org/wiki/RAII).
 
 [风格指南](https://doc.rust-lang.org/1.0.0/style/ownership/raii.html)，目前只是个占位符
