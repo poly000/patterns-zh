@@ -1,6 +1,6 @@
 # Rust设计模式
 
-[![gitlocalized ](https://gitlocalize.com/repo/6974/zh/badge.svg)](https://gitlocalize.com/repo/6974/zh?utm_source=badge)
+[![gitlocalized](https://gitlocalize.com/repo/6974/zh/badge.svg)](https://gitlocalize.com/repo/6974/zh?utm_source=badge)
 
 [在线阅读地址]: https://poly000.github.io/patterns-zh/
 [DeepL]: https://deepl.com/
