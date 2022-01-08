@@ -1,7 +1,7 @@
 # Summary
 
 - [简介](./intro_zh.md)
-- [Idioms](./idioms/index.md)
+- [典型用例](./idioms/index.md)
   - [Use borrowed types for arguments](./idioms/coercion-arguments.md)
   - [Concatenating Strings with `format!`](./idioms/concat-format.md)
   - [Constructor](./idioms/ctor.md)
@@ -25,7 +25,7 @@
     - [Command](./patterns/behavioural/command.md)
     - [Interpreter](./patterns/behavioural/interpreter.md)
     - [Newtype](./patterns/behavioural/newtype.md)
-    - [RAII Guards](./patterns/behavioural/RAII.md)
+    - [RAII守护](./patterns/behavioural/RAII_zh.md)
     - [策略模式](./patterns/behavioural/strategy_zh.md)
     - [Visitor](./patterns/behavioural/visitor.md)
   - [Creational](./patterns/creational/intro.md)
