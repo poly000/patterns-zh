@@ -1,8 +1,8 @@
 [book]
-title = "Rust Design Patterns"
+title = "Rust 设计模式"
 authors = ["the rust-unofficial authors"]
 description = "A catalogue of Rust design patterns, anti-patterns and idioms"
-language = "en"
+language = "zh"
 multilingual = false
 src = "."
 
