@@ -45,7 +45,7 @@
   - [Deref Polymorphism](./anti_patterns/deref.md)
 
 - [函数式编程](./functional/index_zh.md)
-  - [Programming paradigms](./functional/paradigms.md)
+  - [编程范式](./functional/paradigms_zh.md)
   - [Generics as Type Classes](./functional/generics-type-classes.md)
 
 - [Additional Resources](./additional_resources/index.md)
