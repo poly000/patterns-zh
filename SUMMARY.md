@@ -1,7 +1,7 @@
 # Summary
 
 - [简介](./intro_zh.md)
-- [典型用例](./idioms/index.md)
+- [典型用例](./idioms/index_zh.md)
   - [使用借用类型参数](./idioms/coercion-arguments.md)
   - [Concatenating Strings with `format!`](./idioms/concat-format.md)
   - [构造器](./idioms/ctor.md)
@@ -39,7 +39,7 @@
     - [Object-Based APIs](./patterns/ffi/export.md)
     - [Type Consolidation into Wrappers](./patterns/ffi/wrappers.md)
 
-- [Anti-patterns](./anti_patterns/index.md)
+- [Anti-patterns](./anti_patterns/index_zh.md)
   - [Clone to satisfy the borrow checker](./anti_patterns/borrow_clone.md)
   - [`#[deny(warnings)]`](./anti_patterns/deny-warnings.md)
   - [Deref Polymorphism](./anti_patterns/deref.md)
