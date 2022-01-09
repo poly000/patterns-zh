@@ -44,7 +44,7 @@
   - [`#[deny(warnings)]`](./anti_patterns/deny-warnings.md)
   - [Deref Polymorphism](./anti_patterns/deref.md)
 
-- [Functional Programming](./functional/index.md)
+- [函数式编程](./functional/index_zh.md)
   - [Programming paradigms](./functional/paradigms.md)
   - [Generics as Type Classes](./functional/generics-type-classes.md)
 
