@@ -1,7 +1,7 @@
 # Summary
 
 - [简介](./intro_zh.md)
-- [典型用例](./idioms/index_zh.md)
+- [典例](./idioms/index_zh.md)
   - [使用借用类型参数](./idioms/coercion-arguments.md)
   - [Concatenating Strings with `format!`](./idioms/concat-format.md)
   - [构造器](./idioms/ctor.md)
