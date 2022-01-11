@@ -2,6 +2,8 @@
 
 看样子已经有别人做好的[翻译](http://chuxiuhong.com/chuxiuhong-rust-patterns-zh/)，弃坑弃坑（
 
+仓库 [chuxiuhong-rust-patterns-zh](https://github.com/chuxiuhong/chuxiuhong-rust-patterns-zh)
+
 [![gitlocalized](https://gitlocalize.com/repo/6974/zh/badge.svg)](https://gitlocalize.com/repo/6974/zh?utm_source=badge)
 
 [在线阅读地址]: https://poly000.github.io/patterns-zh/
